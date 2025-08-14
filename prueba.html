@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nosotros – 6 meses | 14 de Agosto</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Configuración avanzada de Tailwind con paleta romántica renovada
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              love: {
+                50: '#fef7f7',
+                100: '#fdeaea',
+                200: '#fcd9da',
+                300: '#f9b5b7',
+                400: '#f48688',
+                500: '#ec5860',
+                600: '#d73a44',
+                700: '#b62d37',
+                800: '#982a33',
+                900: '#81282f',
+              },
+              rose: {
+                50: '#fff1f2',
+                100: '#ffe4e6',
+                200: '#fecdd3',
+                300: '#fda4af',
+                400: '#fb7185',
+                500: '#f43f5e',
+                600: '#e11d48',
+                700: '#be123c',
+                800: '#9f1239',
+                900: '#881337',
+              },
+              aurora: {
+                pink: '#ff6b9d',
+                purple: '#c44569',
+                violet: '#f8b500',
+                gold: '#ffeaa7'
+              }
+            },
+            fontFamily: {
+              'romantic': ['Playfair Display', 'serif'],
+              'elegant': ['Inter', 'sans-serif'],
+            },
+            boxShadow: {
+              'romantic': '0 20px 60px rgba(236, 88, 96, 0.3)',
+              'aurora': '0 0 40px rgba(255, 107, 157, 0.4)',
+              'dream': '0 25px 80px rgba(244, 63, 94, 0.25)',
+              'floating': '0 10px 30px rgba(0, 0, 0, 0.1)',
+            },
+            keyframes: {
+              'float-romantic': { 
+                '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' }, 
+                '50%': { transform: 'translateY(-15px) rotate(2deg)' } 
+              },
+              'aurora-glow': {
+                '0%': { filter: 'hue-rotate(0deg) brightness(1)' },
+                '50%': { filter: 'hue-rotate(180deg) brightness(1.2)' },
+                '100%': { filter: 'hue-rotate(360deg) brightness(1)' }
+              },
+              'heart-beat': {
+                '0%': { transform: 'scale(1)' },
+                '14%': { transform: 'scale(1.1)' },
+                '28%': { transform: 'scale(1)' },
+                '42%': { transform: 'scale(1.1)' },
+                '70%': { transform: 'scale(1)' }
+              },
+              'sparkle-dance': {
+                '0%': { opacity: 0, transform: 'translateY(0) scale(0.5) rotate(0deg)' },
+                '50%': { opacity: 1, transform: 'translateY(-20px) scale(1) rotate(180deg)' },
+                '100%': { opacity: 0, transform: 'translateY(-40px) scale(0.5) rotate(360deg)' }
+              },
+              'text-shimmer': {
+                '0%': { backgroundPosition: '-200% center' },
+                '100%': { backgroundPosition: '200% center' }
+              },
+              'morphing-bg': {
+                '0%, 100%': { borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' },
+                '25%': { borderRadius: '58% 42% 75% 25% / 76% 46% 54% 24%' },
+                '50%': { borderRadius: '50% 50% 33% 67% / 55% 27% 73% 45%' },
+                '75%': { borderRadius: '33% 67% 58% 42% / 63% 68% 32% 37%' }
+              }
+            },
+            animation: {
+              'float-romantic': 'float-romantic 4s ease-in-out infinite',
+              'aurora-glow': 'aurora-glow 8s ease-in-out infinite',
+              'heart-beat': 'heart-beat 2s ease-in-out infinite',
+              'sparkle-dance': 'sparkle-dance 3s ease-in-out infinite',
+              'text-shimmer': 'text-shimmer 3s ease-in-out infinite',
+              'morphing-bg': 'morphing-bg 20s ease-in-out infinite'
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* Variables CSS avanzadas para efectos románticos */
+      :root {
+        --glass-romantic: rgba(255, 255, 255, 0.12);
+        --glass-border: rgba(255, 255, 255, 0.25);
+        --shadow-romantic: 0 20px 60px rgba(236, 88, 96, 0.2);
+        --aurora-gradient: linear-gradient(135deg, #ff6b9d, #c44569, #f8b500, #ffeaa7);
+        --romantic-gradient: linear-gradient(135deg, #fdeaea, #fcd9da, #f9b5b7);
+        --text-gradient: linear-gradient(135deg, #d73a44, #ec5860, #fb7185);
+      }
+
+      /* Efectos de glassmorfismo avanzado */
+      .glass-romantic {
+        background: var(--glass-romantic);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1.5px solid var(--glass-border);
+        box-shadow: var(--shadow-romantic);
+      }
+
+      /* Sistema de corazones flotantes mejorado */
+      .hearts-romantic {
+        position: absolute;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .hearts-romantic::before {
+        content: '💕';
+        position: absolute;
+        animation: sparkle-dance 4s ease-in-out infinite;
+        font-size: 24px;
+        opacity: 0.7;
+        color: var(--aurora-pink);
+      }
+
+      /* Fondo aurora romántico */
+      .aurora-background {
+        background: linear-gradient(-45deg, #ff6b9d, #c44569, #f8b500, #ffeaa7, #ff6b9d);
+        background-size: 400% 400%;
+        animation: aurora-glow 15s ease infinite;
+      }
+
+      /* Efectos de texto brillante */
+      .text-shimmer {
+        background: linear-gradient(90deg, #d73a44, #ec5860, #fb7185, #fda4af, #fb7185, #ec5860, #d73a44);
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: text-shimmer 3s linear infinite;
+      }
+
+      /* Efectos de hover avanzados para tarjetas */
+      .card-romantic {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .card-romantic::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.3), transparent);
+        transition: left 0.8s ease;
+        z-index: 1;
+      }
+
+      .card-romantic:hover::before {
+        left: 100%;
+      }
+
+      .card-romantic:hover {
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 0 30px 80px rgba(255, 107, 157, 0.4);
+        border-color: rgba(255, 107, 157, 0.5);
+      }
+
+      /* Efectos de partículas románticas */
+      .particles-romantic {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+      }
+
+      .particle {
+        position: absolute;
+        background: radial-gradient(circle, rgba(255, 107, 157, 0.8), transparent);
+        border-radius: 50%;
+        animation: sparkle-dance linear infinite;
+      }
+
+      /* Morfismo de formas románticas */
+      .morphing-shape {
+        background: var(--aurora-gradient);
+        animation: morphing-bg 20s ease-in-out infinite;
+        filter: blur(40px);
+        opacity: 0.6;
+      }
+
+      /* Efectos de imagen mejorados */
+      .image-romantic {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .image-romantic::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent 20%, rgba(255, 107, 157, 0.3) 100%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        border-radius: 24px;
+      }
+
+      .image-romantic:hover::after {
+        opacity: 1;
+      }
+
+      .image-romantic img {
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        border-radius: 24px;
+      }
+
+      .image-romantic:hover img {
+        transform: scale(1.08) rotate(1deg);
+        filter: brightness(1.1) saturate(1.2);
+      }
+
+      /* Navegación flotante elegante */
+      .nav-floating {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(25px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        padding: 12px 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: all 0.4s ease;
+      }
+
+      .nav-floating:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateX(-50%) scale(1.02);
+      }
+
+      /* Botones románticos mejorados */
+      .btn-romantic {
+        position: relative;
+        background: linear-gradient(135deg, #ec5860, #d73a44);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        padding: 16px 32px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        box-shadow: 0 10px 30px rgba(236, 88, 96, 0.4);
+      }
+
+      .btn-romantic::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        transition: left 0.6s ease;
+      }
+
+      .btn-romantic:hover::before {
+        left: 100%;
+      }
+
+      .btn-romantic:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 20px 50px rgba(236, 88, 96, 0.6);
+      }
+
+      /* Scrollbar personalizada romántica */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: linear-gradient(180deg, #fdeaea, #fcd9da);
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #ec5860, #d73a44);
+        border-radius: 50px;
+        border: 2px solid #fdeaea;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #d73a44, #b62d37);
+      }
+
+      /* Animaciones de entrada suaves */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .fade-in-up.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Efectos de tipografía romántica */
+      .romantic-text {
+        font-family: 'Playfair Display', serif;
+        background: var(--text-gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 4px 20px rgba(236, 88, 96, 0.3);
+      }
+
+      /* Efectos de brillo suave */
+      .soft-glow {
+        box-shadow: 0 0 50px rgba(255, 107, 157, 0.3);
+        filter: drop-shadow(0 0 20px rgba(255, 107, 157, 0.2));
+      }
+
+      /* Diseño responsive mejorado */
+      @media (max-width: 768px) {
+        .nav-floating {
+          position: static;
+          transform: none;
+          margin: 20px;
+          border-radius: 20px;
+        }
+        
+        .card-romantic:hover {
+          transform: translateY(-6px) scale(1.01);
+        }
+      }
+
+      /* Efectos de loading romántico */
+      .loading-heart {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+      }
+
+      .loading-heart::before,
+      .loading-heart::after {
+        content: '♥';
+        position: absolute;
+        color: #ec5860;
+        font-size: 20px;
+        animation: heart-beat 1.5s ease-in-out infinite;
+      }
+
+      .loading-heart::after {
+        animation-delay: 0.75s;
+        color: #fb7185;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen overflow-x-hidden">
+    <!-- Fondo aurora romántico con partículas -->
+    <div class="fixed inset-0 -z-20">
+      <div class="aurora-background w-full h-full"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/40 to-white/60"></div>
+    </div>
+
+    <!-- Partículas románticas flotantes -->
+    <div class="particles-romantic fixed inset-0 -z-10 pointer-events-none">
+      <!-- Las partículas se generarán dinámicamente con JavaScript -->
+    </div>
+
+    <!-- Formas morfológicas de fondo -->
+    <div class="fixed -top-20 -left-20 w-96 h-96 morphing-shape -z-10"></div>
+    <div class="fixed -bottom-20 -right-20 w-80 h-80 morphing-shape -z-10" style="animation-delay: -10s;"></div>
+    <div class="fixed top-1/2 -right-40 w-60 h-60 morphing-shape -z-10" style="animation-delay: -5s;"></div>
+
+    <!-- Navegación flotante elegante -->
+    <nav class="nav-floating">
+      <div class="flex items-center space-x-8">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-love-500 to-rose-500 flex items-center justify-center animate-heart-beat">
+            <span class="text-white text-lg">♥</span>
+          </div>
+          <span class="text-love-800 font-romantic font-bold text-lg">Nosotros</span>
+        </div>
+        
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="#inicio" class="text-love-700 hover:text-love-900 font-medium transition-all duration-300 hover:scale-105">Inicio</a>
+          <a href="#frases" class="text-love-700 hover:text-love-900 font-medium transition-all duration-300 hover:scale-105">Frases</a>
+          <a href="#galeria" class="text-love-700 hover:text-love-900 font-medium transition-all duration-300 hover:scale-105">Galería</a>
+          <a href="#carta" class="text-love-700 hover:text-love-900 font-medium transition-all duration-300 hover:scale-105">Carta</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección Hero renovada -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative pt-20 pb-10">
+      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Contenido principal -->
+        <div class="space-y-8 fade-in-up">
+          <!-- Badge romántico -->
+          <div class="inline-flex items-center space-x-4 glass-romantic rounded-full p-4 animate-float-romantic">
+            <div class="w-4 h-4 rounded-full bg-gradient-to-r from-aurora-pink to-love-500 animate-pulse"></div>
+            <span class="text-love-800 font-semibold">14 de agosto • 6 meses de amor</span>
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-aurora-pink to-love-500 flex items-center justify-center animate-heart-beat">
+              <span class="text-white text-sm">💕</span>
+            </div>
+          </div>
+
+          <!-- Título principal con efectos -->
+          <div class="space-y-6">
+            <h1 class="text-6xl md:text-7xl lg:text-8xl font-black font-romantic leading-none">
+              <span class="block text-shimmer animate-text-shimmer">Con vos,</span>
+              <span class="block romantic-text">cada día</span>
+              <span class="block text-shimmer animate-text-shimmer">late más</span>
+              <span class="block romantic-text">fuerte</span>
+              <div class="inline-flex items-center space-x-2 mt-4">
+                <span class="text-6xl animate-heart-beat">💖</span>
+                <span class="text-6xl animate-heart-beat" style="animation-delay: 0.5s;">✨</span>
+              </div>
+            </h1>
+          </div>
+
+          <!-- Descripción elegante -->
+          <p class="text-xl text-love-700 leading-relaxed max-w-lg font-elegant font-medium">
+            Gracias por convertir lo simple en extraordinario, por tu risa que ilumina todo, y por hacer de este tiempo el 
+            <span class="romantic-text font-bold text-2xl">capítulo más dulce</span> de nuestra historia de amor.
+          </p>
+
+          <!-- Botones de acción mejorados -->
+          <div class="flex flex-wrap items-center gap-6">
+            <a href="#galeria" class="btn-romantic">
+              <span class="relative z-10 flex items-center space-x-2">
+                <span>Ver Nuestra Galería</span>
+                <span class="text-xl">📸</span>
+              </span>
+            </a>
+            <a href="#frases" class="glass-romantic rounded-full px-8 py-4 text-love-700 font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <span class="flex items-center space-x-2">
+                <span>Leer Frases</span>
+                <span class="text-lg">💌</span>
+              </span>
+            </a>
+          </div>
+
+          <!-- Cita romántica -->
+          <div class="relative mt-8">
+            <div class="glass-romantic rounded-2xl p-6 border-l-4 border-aurora-pink">
+              <blockquote class="text-love-700 italic text-xl font-romantic font-medium">
+                "Donde sea, pero con vos. Siempre con vos."
+              </blockquote>
+              <cite class="text-love-600 text-sm mt-2 block">— Nuestro lema de amor</cite>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen principal mejorada -->
+        <div class="relative lg:pl-8 fade-in-up" style="animation-delay: 0.3s;">
+          <div class="relative">
+            <!-- Contenedor principal de imagen -->
+            <div class="aspect-[4/3] image-romantic soft-glow">
+              <img src="img/nenes.jpg" alt="Nosotros de pequeños" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-love-900/60 via-transparent to-transparent rounded-2xl"></div>
+              
+              <!-- Overlay de contenido -->
+              <div class="absolute bottom-8 left-8 right-8 text-center space-y-3">
+                <h3 class="text-white text-3xl font-romantic font-bold drop-shadow-2xl">Vos + Yo = ♾️</h3>
+                <p class="text-white/95 text-lg drop-shadow-lg font-elegant">Desde pequeños, destinados a encontrarnos 💘</p>
+              </div>
+            </div>
+
+            <!-- Elementos flotantes decorativos -->
+            <div class="absolute -bottom-10 -left-10 glass-romantic rounded-3xl p-6 max-w-xs animate-float-romantic soft-glow">
+              <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 rounded-full bg-gradient-to-br from-aurora-pink to-love-500 flex items-center justify-center animate-heart-beat">
+                  <span class="text-white text-xl">✨</span>
+                </div>
+                <div>
+                  <p class="font-bold text-love-800 font-romantic">Promesa eterna:</p>
+                  <p class="text-sm text-love-600 font-elegant">Elegirte hoy y todos los días</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -top-8 -right-8 glass-romantic rounded-2xl p-6 animate-float-romantic soft-glow" style="animation-delay: 1s;">
+              <div class="text-center">
+                <div class="text-3xl mb-2 animate-heart-beat">💕</div>
+                <p class="text-sm font-bold text-love-700 font-romantic">6 meses</p>
+                <p class="text-xs text-love-600 font-elegant">de puro amor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll elegante -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div class="w-8 h-12 glass-romantic rounded-full flex justify-center items-start pt-3 animate-bounce">
+          <div class="w-1 h-4 bg-gradient-to-b from-aurora-pink to-love-500 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Frases renovada -->
+    <section id="frases" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header de sección -->
+        <div class="text-center mb-20 fade-in-up">
+          <div class="inline-flex items-center space-x-3 glass-romantic rounded-full px-6 py-3 mb-8">
+            <span class="text-2xl animate-heart-beat">💌</span>
+            <span class="text-love-700 font-semibold font-elegant">Palabras del corazón</span>
+          </div>
+          <h2 class="text-5xl md:text-6xl font-black font-romantic romantic-text mb-6">Frases que te amo</h2>
+          <p class="text-xl text-love-600 max-w-2xl mx-auto font-elegant">Palabras que nacen del alma para llegar a tu corazón</p>
+        </div>
+
+        <!-- Grid de frases mejorado -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Frase 1 -->
+          <div class="card-romantic rounded-3xl p-8 shadow-romantic fade-in-up" style="animation-delay: 0.1s;">
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-aurora-pink to-love-500 flex items-center justify-center mb-6 soft-glow animate-float-romantic">
+                <span class="text-white text-2xl">✨</span>
+              </div>
+              
+              <blockquote class="text-love-800 text-xl leading-relaxed font-romantic font-medium mb-6">
+                "Si tuviera que elegir de nuevo, te elegiría a ti una y mil veces."
+              </blockquote>
+              
+              <figcaption class="text-love-600 font-semibold border-l-4 border-aurora-pink pl-4 font-elegant">
+                Para vos, por siempre 💖
+              </figcaption>
+            </div>
+          </div>
+
+          <!-- Frase 2 -->
+          <div class="card-romantic rounded-3xl p-8 shadow-romantic fade-in-up" style="animation-delay: 0.2s;">
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-love-500 to-rose-500 flex items-center justify-center mb-6 soft-glow animate-float-romantic">
+                <span class="text-white text-2xl">💕</span>
+              </div>
+              
+              <blockquote class="text-love-800 text-xl leading-relaxed font-romantic font-medium mb-6">
+                "No sé qué hice para merecerte, pero prometo seguir haciéndolo."
+              </blockquote>
+              
+              <figcaption class="text-love-600 font-semibold border-l-4 border-love-400 pl-4 font-elegant">
+                Hoy, mañana y siempre 🌹
+              </figcaption>
+            </div>
+          </div>
+
+          <!-- Frase 3 -->
+          <div class="card-romantic rounded-3xl p-8 shadow-romantic fade-in-up" style="animation-delay: 0.3s;">
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-love-600 flex items-center justify-center mb-6 soft-glow animate-float-romantic">
+                <span class="text-white text-2xl">🏠</span>
+              </div>
+              
+              <blockquote class="text-love-800 text-xl leading-relaxed font-romantic font-medium mb-6">
+                "Mi lugar favorito siempre será donde estés tú."
+              </blockquote>
+              
+              <figcaption class="text-love-600 font-semibold border-l-4 border-rose-400 pl-4 font-elegant">
+                Nuestro refugio 🏡
+              </figcaption>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería renovada con efectos avanzados -->
+    <section id="galeria" class="py-20 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header de sección -->
+        <div class="text-center mb-20 fade-in-up">
+          <div class="inline-flex items-center space-x-3 glass-romantic rounded-full px-6 py-3 mb-8">
+            <span class="text-2xl animate-heart-beat">📸</span>
+            <span class="text-love-700 font-semibold font-elegant">Momentos únicos</span>
+          </div>
+          <h2 class="text-5xl md:text-6xl font-black font-romantic romantic-text mb-6">Galería de Recuerdos</h2>
+          <p class="text-xl text-love-600 max-w-2xl mx-auto font-elegant">Cada imagen cuenta nuestra historia de amor</p>
+        </div>
+
+        <!-- Grid de galería mejorado -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-[280px]">
+          <!-- Imagen principal - Primera Salida -->
+          <div class="lg:col-span-3 lg:row-span-2 card-romantic rounded-3xl overflow-hidden shadow-romantic fade-in-up">
+            <div class="w-full h-full relative group">
+              <div class="image-romantic h-full">
+                <img src="img/primera_salida.jpg" alt="Nuestra Primera salida" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
+                <div class="space-y-4">
+                  <div class="glass-romantic rounded-full px-4 py-2 mb-4">
+                    <span class="text-white font-elegant text-sm">✨ Momento especial</span>
+                  </div>
+                  <h3 class="text-4xl font-bold text-white font-romantic drop-shadow-2xl">Nuestra Primera Salida</h3>
+                  <p class="text-white text-xl leading-relaxed drop-shadow-lg font-elegant">"Ahí supe que todo iba a estar bien."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primer Beso -->
+          <div class="lg:col-span-2 lg:row-span-2 card-romantic rounded-3xl overflow-hidden shadow-romantic fade-in-up" style="animation-delay: 0.1s;">
+            <div class="w-full h-full relative group">
+              <div class="image-romantic h-full">
+                <img src="img/primer_beso_en_la_cabeza.jpg" alt="Primer beso que te di" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                <div class="space-y-4">
+                  <div class="glass-romantic rounded-full px-4 py-2 mb-4">
+                    <span class="text-white font-elegant text-sm">💕 Favorito</span>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white font-romantic drop-shadow-2xl">Primer beso que te di</h3>
+                  <p class="text-white text-base leading-relaxed drop-shadow-lg font-elegant">"El momento más tierno y nervioso."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hermosos -->
+          <div class="lg:col-span-3 card-romantic rounded-3xl overflow-hidden shadow-romantic fade-in-up" style="animation-delay: 0.2s;">
+            <div class="w-full h-full relative group">
+              <div class="image-romantic h-full">
+                <img src="img/hermosos.jpg" alt="Hermosos" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                <div class="space-y-3">
+                  <h3 class="text-3xl font-bold text-white font-romantic drop-shadow-2xl">Hermosos</h3>
+                  <p class="text-white text-lg leading-relaxed drop-shadow-lg font-elegant">"Como siempre 💖"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primera flor -->
+          <div class="lg:col-span-2 card-romantic rounded-3xl overflow-hidden shadow-romantic fade-in-up" style="animation-delay: 0.3s;">
+            <div class="w-full h-full relative group">
+              <div class="image-romantic h-full">
+                <img src="img/la_primera_flor.jpg" alt="Primera flor" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
+                <div class="space-y-3">
+                  <h3 class="text-2xl font-bold text-white font-romantic drop-shadow-2xl">Primera flor</h3>
+                  <p class="text-white text-base leading-relaxed drop-shadow-lg font-elegant">"Le robé a una profe para darte 🌹"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primer Abrazo -->
+          <div class="md:col-span-2 lg:col-span-3 card-romantic rounded-3xl overflow-hidden shadow-romantic fade-in-up" style="animation-delay: 0.4s;">
+            <div class="w-full h-full relative group">
+              <div class="image-romantic h-full">
+                <img src="img/primer_abrazo_en_foto.jpg" alt="Primer abrazo en foto" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6">
+                <div class="space-y-4">
+                  <h3 class="text-3xl font-bold text-white font-romantic drop-shadow-2xl">Nosotros</h3>
+                  <p class="text-white text-lg leading-relaxed drop-shadow-lg font-elegant">"El primer abrazo en foto 🤗"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Churros -->
+          <div class="lg:col-span-2 card-romantic rounded-3xl overflow-hidden shadow-romantic fade-in-up" style="animation-delay: 0.5s;">
+            <div class="w-full h-full relative group">
+              <div class="image-romantic h-full">
+                <img src="img/churros.jpg" alt="Primera salida inoficial" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+              </div>
+              
+              <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
+                <div class="space-y-3">
+                  <h3 class="text-2xl font-bold text-white font-romantic drop-shadow-2xl">Primera salida inoficial</h3>
+                  <p class="text-white text-base leading-relaxed drop-shadow-lg font-elegant">"Cuando ya quería casarme 💒"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carta de amor renovada -->
+    <section id="carta" class="py-20 relative">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="card-romantic rounded-3xl p-10 md:p-16 shadow-dream fade-in-up">
+          <div class="text-center mb-12">
+            <div class="inline-flex items-center space-x-3 glass-romantic rounded-full px-6 py-3 mb-8">
+              <span class="text-2xl animate-heart-beat">💌</span>
+              <span class="text-love-700 font-semibold font-elegant">Carta especial</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-black font-romantic romantic-text">Una carta para vos</h2>
+          </div>
+          
+          <div class="space-y-8 text-lg text-love-800 leading-relaxed font-elegant">
+            <p class="text-xl">
+              Gracias por estos seis meses que se sienten como un abrazo que no termina. Gracias por tu paciencia, por tu dulzura, por mirar conmigo en la misma dirección junto a mí. Con vos aprendí que el amor también es calma, es contención y es hogar. Me encanta tu risa, tu forma de decir mi nombre y la paz que encuentro en tus ojos.
+            </p>
+            
+            <p class="text-xl">
+              Prometo cuidarte, escucharte y elegirte incluso en los días nublados. Prometo darte los besos y abrazos cuando haga falta, besos cuando sobren ganas y manos cuando falten fuerzas. Sos mi lugar favorito del mundo.
+            </p>
+            
+            <div class="text-right pt-8 border-t border-love-200">
+              <p class="text-love-700 italic text-xl font-romantic">
+                Con todo el amor del mundo, 
+                <span class="font-bold romantic-text text-2xl">TSHYAE</span> 
+                <span class="text-2xl animate-heart-beat">♡</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer romántico -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="card-romantic rounded-3xl p-8 md:p-12 shadow-dream text-center">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+              <h3 class="text-3xl md:text-4xl font-black font-romantic romantic-text">Feliz mesiversario, amor</h3>
+              <p class="text-love-700 text-lg font-elegant">Que el mundo sea enorme, pero nuestro abrazo más grande.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center md:justify-end gap-4">
+              <a href="#inicio" class="btn-romantic">
+                <span class="flex items-center space-x-2">
+                  <span>Volver al inicio</span>
+                  <span>🏠</span>
+                </span>
+              </a>
+              <a href="#galeria" class="glass-romantic rounded-full px-6 py-3 text-love-700 font-semibold hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <span class="flex items-center space-x-2">
+                  <span>Ver fotos</span>
+                  <span>📸</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-8 border-t border-love-200">
+            <p class="text-love-600 font-elegant">
+              Hecho con <span class="text-2xl animate-heart-beat">♥</span> para vos • 14 de agosto
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón flotante de regreso -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 glass-romantic rounded-full p-4 shadow-romantic hover:scale-110 transition-all duration-300 z-50 opacity-0 pointer-events-none">
+      <span class="text-love-700 text-xl">↑</span>
+    </button>
+
+    <!-- JavaScript mejorado con efectos avanzados -->
+    <script>
+      // Sistema de partículas románticas avanzado
+      class RomanticParticleSystem {
+        constructor() {
+          this.container = document.querySelector('.particles-romantic');
+          this.particles = [];
+          this.hearts = ['💕', '💖', '💗', '💘', '💙', '💚', '💛', '🧡', '💜', '🤍', '✨', '⭐', '🌟'];
+          this.init();
+        }
+
+        init() {
+          this.createParticles();
+          this.addMouseInteraction();
+          this.startAnimation();
+        }
+
+        createParticles() {
+          for (let i = 0; i < 30; i++) {
+            this.createParticle();
+          }
+        }
+
+        createParticle() {
+          const particle = document.createElement('div');
+          particle.innerHTML = this.hearts[Math.floor(Math.random() * this.hearts.length)];
+          particle.className = 'absolute text-2xl pointer-events-none opacity-60';
+          
+          // Posición inicial aleatoria
+          particle.style.left = Math.random() * 100 + 'vw';
+          particle.style.top = '100vh';
+          
+          // Propiedades de animación
+          particle.animationDuration = (Math.random() * 15 + 10) + 's';
+          particle.animationDelay = Math.random() * 5 + 's';
+          particle.style.fontSize = (Math.random() * 12 + 16) + 'px';
+          
+          this.container.appendChild(particle);
+          this.particles.push(particle);
+          
+          // Animar partícula
+          this.animateParticle(particle);
+        }
+
+        animateParticle(particle) {
+          const startY = window.innerHeight;
+          const endY = -100;
+          const startX = parseFloat(particle.style.left);
+          const amplitude = 50; // Amplitud del movimiento sinusoidal
+          const frequency = 0.02;
+          
+          let startTime = null;
+          const duration = parseFloat(particle.animationDuration) * 1000;
+          
+          const animate = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = elapsed / duration;
+            
+            if (progress < 1) {
+              const currentY = startY + (endY - startY) * progress;
+              const currentX = startX + Math.sin(progress * Math.PI * frequency * 100) * amplitude;
+              
+              particle.style.transform = `translate(${currentX - startX}px, ${currentY - startY}px) rotate(${progress * 360}deg)`;
+              particle.style.opacity = Math.sin(progress * Math.PI) * 0.8;
+              
+              requestAnimationFrame(animate);
+            } else {
+              // Reiniciar partícula
+              particle.style.left = Math.random() * 100 + 'vw';
+              particle.style.top = '100vh';
+              particle.style.transform = 'translate(0, 0) rotate(0deg)';
+              setTimeout(() => this.animateParticle(particle), Math.random() * 3000);
+            }
+          };
+          
+          requestAnimationFrame(animate);
+        }
+
+        addMouseInteraction() {
+          let lastInteraction = 0;
+          document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastInteraction > 100) {
+              this.createInteractiveParticle(e.clientX, e.clientY);
+              lastInteraction = now;
+            }
+          });
+        }
+
+        createInteractiveParticle(x, y) {
+          const particle = document.createElement('div');
+          particle.innerHTML = '💖';
+          particle.className = 'fixed text-2xl pointer-events-none z-50';
+          particle.style.left = x + 'px';
+          particle.style.top = y + 'px';
+          particle.style.transform = 'translate(-50%, -50%)';
+          
+          document.body.appendChild(particle);
+          
+          // Animación de dispersión
+          const angle = Math.random() * Math.PI * 2;
+          const distance = Math.random() * 100 + 50;
+          const endX = x + Math.cos(angle) * distance;
+          const endY = y + Math.sin(angle) * distance;
+          
+          particle.animate([
+            { transform: 'translate(-50%, -50%) scale(0.5)', opacity: 1 },
+            { transform: `translate(${endX - x}px, ${endY - y}px) scale(1.5)`, opacity: 0 }
+          ], {
+            duration: 1500,
+            easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+          }).onfinish = () => {
+            particle.remove();
+          };
+        }
+
+        startAnimation() {
+          // Mantener el sistema corriendo
+          setInterval(() => {
+            if (this.particles.length < 30) {
+              this.createParticle();
+            }
+          }, 2000);
+        }
+      }
+
+      // Gestor de navegación mejorado
+      class EnhancedNavigation {
+        constructor() {
+          this.nav = document.querySelector('.nav-floating');
+          this.scrollToTopBtn = document.getElementById('scrollToTop');
+          this.sections = document.querySelectorAll('section');
+          this.init();
+        }
+
+        init() {
+          this.handleScroll();
+          this.setupSmoothScrolling();
+          this.setupScrollToTop();
+          this.highlightActiveSection();
+        }
+
+        handleScroll() {
+          let lastScrollY = 0;
+          let ticking = false;
+
+          const updateScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            // Navegación flotante
+            if (currentScrollY > 100) {
+              this.nav.style.background = 'rgba(255, 255, 255, 0.25)';
+              this.nav.style.backdropFilter = 'blur(30px)';
+            } else {
+              this.nav.style.background = 'rgba(255, 255, 255, 0.15)';
+              this.nav.style.backdropFilter = 'blur(25px)';
+            }
+            
+            // Botón de scroll to top
+            if (currentScrollY > 500) {
+              this.scrollToTopBtn.style.opacity = '1';
+              this.scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+              this.scrollToTopBtn.style.opacity = '0';
+              this.scrollToTopBtn.style.pointerEvents = 'none';
+            }
+            
+            lastScrollY = currentScrollY;
+            ticking = false;
+          };
+
+          window.addEventListener('scroll', () => {
+            if (!ticking) {
+              requestAnimationFrame(updateScroll);
+              ticking = true;
+            }
+          });
+        }
+
+        setupSmoothScrolling() {
+          document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              const targetId = link.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+              
+              if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 100;
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        }
+
+        setupScrollToTop() {
+          this.scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          });
+        }
+
+        highlightActiveSection() {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const id = entry.target.id;
+                const navLink = document.querySelector(`a[href="#${id}"]`);
+                if (navLink) {
+                  document.querySelectorAll('.nav-floating a').forEach(link => {
+                    link.classList.remove('text-love-900', 'font-bold');
+                    link.classList.add('text-love-700');
+                  });
+                  navLink.classList.add('text-love-900', 'font-bold');
+                  navLink.classList.remove('text-love-700');
+                }
+              }
+            });
+          }, { threshold: 0.3 });
+
+          this.sections.forEach(section => {
+            observer.observe(section);
+          });
+        }
+      }
+
+      // Sistema de animaciones por intersección
+      class AnimationIntersectionObserver {
+        constructor() {
+          this.observer = new IntersectionObserver(
+            this.handleIntersection.bind(this),
+            {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px'
+            }
+          );
+          this.init();
+        }
+
+        init() {
+          document.querySelectorAll('.fade-in-up').forEach(el => {
+            this.observer.observe(el);
+          });
+        }
+
+        handleIntersection(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              this.observer.unobserve(entry.target);
+            }
+          });
+        }
+      }
+
+      // Sistema de efectos de hover mejorados
+      class HoverEffectsManager {
+        constructor() {
+          this.init();
+        }
+
+        init() {
+          this.setupCardHovers();
+          this.setupButtonHovers();
+        }
+
+        setupCardHovers() {
+          document.querySelectorAll('.card-romantic').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+              card.style.transform = 'translateY(-12px) scale(1.03)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+              card.style.transform = 'translateY(0) scale(1)';
+            });
+          });
+        }
+
+        setupButtonHovers() {
+          document.querySelectorAll('.btn-romantic').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+              btn.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+              btn.style.transform = 'translateY(0) scale(1)';
+            });
+          });
+        }
+      }
+
+      // Inicialización cuando el DOM esté listo
+      document.addEventListener('DOMContentLoaded', () => {
+        // Inicializar todos los sistemas
+        new RomanticParticleSystem();
+        new EnhancedNavigation();
+        new AnimationIntersectionObserver();
+        new HoverEffectsManager();
+        
+        // Efecto de carga suave
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 1s ease-in-out';
+        
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+        
+        console.log('💖 Página romántica completamente cargada con efectos avanzados!');
+      });
+
+      // Optimización de rendimiento
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'measure') {
+            console.log(`⚡ ${entry.name}: ${entry.duration}ms`);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['measure'] });
+    </script>
+  </body>
+</html>
