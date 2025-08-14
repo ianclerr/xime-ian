@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nosotros – 6 meses | 14 de Agosto</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config: custom romantic palette
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              love: {
+                50: '#fff1f2',
+                100: '#ffe4e6',
+                200: '#fecdd3',
+                300: '#fda4af',
+                400: '#fb7185',
+                500: '#f43f5e',
+                600: '#e11d48',
+                700: '#be123c',
+                800: '#9f1239',
+                900: '#881337',
+              }
+            },
+            boxShadow: {
+              glow: '0 0 40px rgba(244,63,94,0.25)'
+            },
+            keyframes: {
+              float: { '0%, 100%': { transform: 'translateY(0px)' }, '50%': { transform: 'translateY(-8px)' } },
+              sparkle: { '0%': { opacity: 0, transform: 'translateY(0) scale(0.9)' }, '50%': { opacity: 1 }, '100%': { opacity: 0, transform: 'translateY(-30px) scale(1.1)' } },
+              pulseSoft: { '0%,100%': { transform: 'scale(1)' }, '50%': { transform: 'scale(1.02)' } }
+            },
+            animation: {
+              float: 'float 6s ease-in-out infinite',
+              sparkle: 'sparkle 3.5s ease-in-out infinite',
+              pulseSoft: 'pulseSoft 5s ease-in-out infinite'
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Modern CSS Variables */
+      :root {
+        --glass-bg: rgba(255, 255, 255, 0.1);
+        --glass-border: rgba(255, 255, 255, 0.2);
+        --shadow-soft: 0 8px 32px rgba(136, 19, 55, 0.1);
+        --shadow-hover: 0 16px 64px rgba(136, 19, 55, 0.15);
+        --blur-amount: 16px;
+      }
+
+      /* Advanced Floating Hearts */
+      .hearts-bg span {
+        position: absolute;
+        display: block;
+        width: 16px; height: 16px;
+        background: linear-gradient(135deg, #fda4af, #fb7185, #f43f5e);
+        transform: rotate(45deg);
+        opacity: 0.15;
+        animation: floatY linear infinite, sparkle 4s ease-in-out infinite;
+        border-radius: 3px;
+        filter: blur(0.5px);
+      }
+      .hearts-bg span::before,
+      .hearts-bg span::after{
+        content: '';
+        position: absolute;
+        width: 16px; height: 16px;
+        background: inherit;
+        border-radius: 50%;
+      }
+      .hearts-bg span::before{ left: -8px; }
+      .hearts-bg span::after{ top: -8px; }
+      
+      @keyframes floatY {
+        0% { transform: translateY(0) rotate(45deg) scale(0.8); }
+        50% { transform: translateY(-60vh) rotate(45deg) scale(1.2); }
+        100% { transform: translateY(-120vh) rotate(45deg) scale(0.8); }
+      }
+      
+      @keyframes sparkle {
+        0%, 100% { opacity: 0.1; filter: blur(0.5px); }
+        50% { opacity: 0.3; filter: blur(0px); }
+      }
+
+      /* Glassmorphism Effects */
+      .glass {
+        background: var(--glass-bg);
+        backdrop-filter: blur(var(--blur-amount));
+        -webkit-backdrop-filter: blur(var(--blur-amount));
+        border: 1px solid var(--glass-border);
+      }
+
+      /* Advanced Bento Grid */
+      .bento-tile {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .bento-tile::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+        transition: left 0.6s ease-out;
+        z-index: 10;
+      }
+      
+      .bento-tile:hover::before {
+        left: 100%;
+      }
+      
+      .bento-tile:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: var(--shadow-hover);
+        border-color: rgba(244, 63, 94, 0.3);
+      }
+      
+      .bento-content {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(20px);
+      }
+      
+      .bento-tile:hover .bento-content {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 32px rgba(244, 63, 94, 0.2);
+      }
+
+      /* Image Container Improvements */
+      .image-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+      }
+      
+      .image-container::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent 30%, rgba(244, 63, 94, 0.1) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .bento-tile:hover .image-container::after {
+        opacity: 1;
+      }
+      
+      .image-container img {
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .bento-tile:hover .image-container img {
+        transform: scale(1.05);
+      }
+
+      /* Advanced Typography */
+      .text-gradient {
+        background: linear-gradient(135deg, #be123c, #f43f5e, #fb7185);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Smooth Scroll */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #fff1f2;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #f43f5e, #fb7185);
+        border-radius: 4px;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #be123c, #f43f5e);
+      }
+
+      /* Parallax Effect */
+      .parallax {
+        transform: translateZ(0);
+        will-change: transform;
+      }
+
+      /* Loading Animation */
+      @keyframes slideInUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      .animate-slide-in {
+        animation: slideInUp 0.6s ease-out forwards;
+      }
+
+      /* Interactive Elements */
+      .interactive-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .interactive-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(244, 63, 94, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen bg-gradient-to-b from-love-50 via-white to-love-50 text-love-900">
+    <!-- Floating hearts background elements -->
+    <div class="hearts-bg pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <!-- generated in JS below for random positions -->
+    </div>
+
+    <!-- Modern Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/20 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <span class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-love-500 to-love-600 shadow-lg shadow-love-500/25 transform transition-transform hover:scale-105">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-white">
+                  <path d="M11.645 20.91l-.007-.003-.022-.011a15.247 15.247 0 01-.383-.21 25.18 25.18 0 01-4.244-3.017C4.688 15.36 2.25 12.773 2.25 9.5 2.25 6.75 4.5 4.5 7.25 4.5c1.755 0 3.09.75 4.006 1.689C12.17 5.25 13.505 4.5 15.26 4.5c2.75 0 5 2.25 5 5 0 3.273-2.438 5.86-4.739 8.169a25.175 25.175 0 01-4.244 3.017l-.383.21-.022.01-.007.004a.75.75 0 01-.22.09.75.75 0 01-.22-.09z"/>
+                </svg>
+              </span>
+              <div class="absolute -inset-1 bg-gradient-to-br from-love-400 to-love-600 rounded-2xl blur opacity-25 animate-pulse"></div>
+            </div>
+            <div>
+              <h1 class="text-xl font-bold text-gradient">Nosotros</h1>
+              <p class="text-sm text-love-600 font-medium">6 meses juntos ♥</p>
+            </div>
+          </div>
+
+          <!-- Navigation Links -->
+          <nav class="hidden lg:flex items-center gap-8">
+            <a href="#inicio" class="nav-link relative px-4 py-2 text-love-700 font-medium hover:text-love-900 transition-all duration-300 group">
+              <span class="relative z-10">Inicio</span>
+              <div class="absolute inset-0 bg-love-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></div>
+            </a>
+            <a href="#bento" class="nav-link relative px-4 py-2 text-love-700 font-medium hover:text-love-900 transition-all duration-300 group">
+              <span class="relative z-10">Galería</span>
+              <div class="absolute inset-0 bg-love-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></div>
+            </a>
+            <a href="#frases" class="nav-link relative px-4 py-2 text-love-700 font-medium hover:text-love-900 transition-all duration-300 group">
+              <span class="relative z-10">Frases</span>
+              <div class="absolute inset-0 bg-love-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></div>
+            </a>
+            <a href="#nosotros" class="nav-link relative px-4 py-2 text-love-700 font-medium hover:text-love-900 transition-all duration-300 group">
+              <span class="relative z-10">Nosotros</span>
+              <div class="absolute inset-0 bg-love-100 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 origin-center"></div>
+            </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden relative w-10 h-10 rounded-xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center transition-all hover:bg-white/20">
+            <svg class="w-5 h-5 text-love-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Modern Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <!-- Background Elements -->
+      <div class="absolute inset-0 bg-gradient-to-br from-love-50 via-white to-rose-50"></div>
+      <div class="absolute top-20 left-10 w-72 h-72 bg-love-200/20 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-rose-200/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+      
+      <div class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Content Side -->
+          <div class="space-y-8 animate-slide-in">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full glass border border-white/30 shadow-lg">
+              <div class="w-3 h-3 rounded-full bg-gradient-to-r from-love-500 to-rose-500 animate-pulse"></div>
+              <span class="text-sm font-semibold text-love-800">14 de agosto · 6 meses juntos</span>
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-love-400 to-rose-400 flex items-center justify-center">
+                <span class="text-xs">♥</span>
+              </div>
+            </div>
+
+            <!-- Main Heading -->
+            <div class="space-y-4">
+              <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.9] tracking-tight">
+                <span class="block text-gradient">Con vos,</span>
+                <span class="block text-love-900">cada día</span>
+                <span class="block text-gradient">late más fuerte</span>
+                <span class="text-6xl animate-pulse">♥</span>
+              </h1>
+            </div>
+
+            <!-- Description -->
+            <p class="text-xl text-love-700 leading-relaxed max-w-lg font-medium">
+              Gracias por convertir lo simple en extraordinario, por tu risa que ilumina todo, y por hacer de este tiempo el 
+              <span class="text-gradient font-bold">capítulo más dulce</span> de nuestra historia.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="#bento" class="group relative px-8 py-4 rounded-2xl bg-gradient-to-r from-love-600 to-love-700 text-white font-bold shadow-xl shadow-love-500/25 transition-all duration-300 hover:shadow-2xl hover:shadow-love-500/40 hover:scale-105 interactive-hover">
+                <span class="relative z-10">Ver Nuestra Galería</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-love-700 to-love-800 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </a>
+              <a href="#frases" class="px-8 py-4 rounded-2xl glass border border-white/30 text-love-700 font-bold transition-all duration-300 hover:bg-white/20 interactive-hover">
+                Leer Frases
+              </a>
+            </div>
+
+            <!-- Quote -->
+            <div class="relative">
+              <blockquote class="text-love-600 italic text-lg font-medium pl-6 border-l-4 border-love-300">
+                "Donde sea, pero con vos."
+              </blockquote>
+            </div>
+          </div>
+
+          <!-- Image Side -->
+          <div class="relative lg:pl-8 animate-slide-in" style="animation-delay: 0.2s;">
+            <!-- Main Image Container -->
+            <div class="relative">
+              <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-love-500/20 bg-gradient-to-br from-love-100 to-rose-100 p-4">
+                <div class="w-full h-full rounded-2xl overflow-hidden relative image-container">
+                  <img src="img/nenes.jpg" alt="Nosotros de pequeños" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-love-900/70 via-transparent to-transparent"></div>
+                  
+                  <!-- Overlay Content -->
+                  <div class="absolute bottom-6 left-6 right-6 text-center space-y-2">
+                    <h3 class="text-white text-2xl font-bold drop-shadow-lg">Vos + Yo = Siempre</h3>
+                    <p class="text-white/90 text-base drop-shadow">Desde pequeños, destinados a encontrarnos 💘</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating Elements -->
+              <div class="absolute -bottom-8 -left-8 glass rounded-2xl p-6 shadow-xl border border-white/30 max-w-xs animate-float">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-gradient-to-br from-love-500 to-rose-500 flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-bold text-love-800">Promesa:</p>
+                    <p class="text-sm text-love-600">Elegirte, hoy y todos los días</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="absolute -top-6 -right-6 glass rounded-xl p-4 shadow-lg border border-white/30 animate-float" style="animation-delay: 1s;">
+                <div class="text-center">
+                  <div class="text-2xl mb-1">💕</div>
+                  <p class="text-xs font-semibold text-love-700">6 meses</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="w-6 h-10 border-2 border-love-300 rounded-full flex justify-center">
+          <div class="w-1 h-3 bg-love-500 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Frases Section -->
+    <section id="frases" class="py-20 relative overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-b from-white via-love-50/30 to-white"></div>
+      <div class="absolute top-10 right-20 w-64 h-64 bg-rose-200/20 rounded-full blur-3xl animate-pulse"></div>
+      
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl sm:text-5xl font-black text-gradient mb-4">Frases que te amo</h2>
+          <p class="text-xl text-love-600 max-w-2xl mx-auto">Palabras del corazón que resumen nuestro amor</p>
+        </div>
+
+        <!-- Frases Grid -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Frase 1 -->
+          <figure class="group relative p-8 rounded-3xl glass border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 interactive-hover">
+            <div class="absolute inset-0 bg-gradient-to-br from-love-400/5 to-rose-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-love-500 to-rose-500 flex items-center justify-center mb-6 shadow-lg shadow-love-500/25">
+                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </div>
+              
+              <blockquote class="text-love-800 text-xl leading-relaxed font-medium mb-6">
+                "Si tuviera que elegir de nuevo, te elegiría a ti una y mil veces."
+              </blockquote>
+              
+              <figcaption class="text-love-600 font-semibold border-l-4 border-love-300 pl-4">
+                Para vos, por siempre
+              </figcaption>
+            </div>
+          </figure>
+
+          <!-- Frase 2 -->
+          <figure class="group relative p-8 rounded-3xl glass border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 interactive-hover">
+            <div class="absolute inset-0 bg-gradient-to-br from-rose-400/5 to-pink-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center mb-6 shadow-lg shadow-rose-500/25">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              
+              <blockquote class="text-love-800 text-xl leading-relaxed font-medium mb-6">
+                "No sé qué hice para merecerte, pero prometo seguir haciéndolo."
+              </blockquote>
+              
+              <figcaption class="text-love-600 font-semibold border-l-4 border-rose-300 pl-4">
+                Hoy, mañana y siempre
+              </figcaption>
+            </div>
+          </figure>
+
+          <!-- Frase 3 -->
+          <figure class="group relative p-8 rounded-3xl glass border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 interactive-hover">
+            <div class="absolute inset-0 bg-gradient-to-br from-pink-400/5 to-love-400/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div class="relative z-10">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-love-500 flex items-center justify-center mb-6 shadow-lg shadow-pink-500/25">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              
+              <blockquote class="text-love-800 text-xl leading-relaxed font-medium mb-6">
+                "Mi lugar favorito siempre será donde estés tú."
+              </blockquote>
+              
+              <figcaption class="text-love-600 font-semibold border-l-4 border-pink-300 pl-4">
+                Nuestro refugio
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modern Bento Gallery -->
+    <section id="bento" class="py-20 relative overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-b from-white via-love-50/20 to-white"></div>
+      <div class="absolute top-0 left-0 w-full h-full">
+        <div class="absolute top-20 left-20 w-80 h-80 bg-love-200/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute bottom-20 right-20 w-96 h-96 bg-rose-200/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-3 px-6 py-2 rounded-full glass border border-white/30 shadow-lg mb-6">
+            <div class="w-2 h-2 rounded-full bg-gradient-to-r from-love-500 to-rose-500 animate-pulse"></div>
+            <span class="text-sm font-semibold text-love-700">Algunos Recuerdos</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gradient mb-4">Nuestra galería de Recuerdos</h2>
+          <p class="text-xl text-love-600 max-w-2xl mx-auto">Momentos que guardo en el corazón y alma</p>
+        </div>
+
+        <!-- Advanced Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 auto-rows-[250px]">
+          <!-- Tile Principal Grande - Primera Salida -->
+          <div class="bento-tile md:col-span-2 lg:col-span-3 lg:row-span-2 rounded-3xl overflow-hidden shadow-xl">
+            <div class="w-full h-full relative group">
+              <!-- Imagen de fondo perfectamente centrada -->
+              <div class="absolute inset-0 image-container">
+                <img src="img/primera_salida.jpg" alt="Nuestra Primera salida" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              </div>
+              
+              <!-- Contenido superpuesto -->
+              <div class="relative z-10 h-full flex flex-col justify-center items-center text-center p-6">
+                <div class="space-y-4">
+                  <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                    <div class="w-2 h-2 rounded-full bg-love-400 animate-pulse"></div>
+                    <span class="text-xs font-semibold text-white">Momento especial</span>
+                  </div>
+                  <h3 class="text-3xl font-bold text-white" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Nuestra Primera salida</h3>
+                  <p class="text-white text-lg leading-relaxed" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.9);">"Ahí supe que todo iba a estar bien."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile Vertical - Primer Beso -->
+          <div class="bento-tile lg:col-span-2 lg:row-span-2 rounded-3xl overflow-hidden shadow-xl">
+            <div class="w-full h-full relative group">
+              <div class="absolute inset-0 image-container">
+                <img src="img/primer_beso_en_la_cabeza.jpg" alt="Primer beso que te di" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              </div>
+              <div class="relative z-10 h-full flex flex-col justify-center items-center text-center p-6">
+                <div class="space-y-4">
+                  <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
+                    <svg class="w-3 h-3 text-love-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                    <span class="text-xs font-semibold text-white">Favorito</span>
+                  </div>
+                  <h3 class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Primer beso que te di</h3>
+                  <p class="text-white text-base leading-relaxed" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.9);">"El momento más tierno y nervioso que tuve."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Tile - Hermosos -->
+          <div class="bento-tile lg:col-span-3 rounded-3xl overflow-hidden shadow-xl">
+            <div class="w-full h-full relative group">
+              <div class="absolute inset-0 image-container">
+                <img src="img/hermosos.jpg" alt="Hermosos" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              </div>
+              <div class="relative z-10 h-full flex flex-col justify-center items-center text-center p-4">
+                <div class="space-y-3">
+                  <h3 class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Hermosos</h3>
+                  <p class="text-white text-base leading-relaxed" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.9);">"Como siempre"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Tile - Primera flor -->
+          <div class="bento-tile lg:col-span-2 rounded-3xl overflow-hidden shadow-xl">
+            <div class="w-full h-full relative group">
+              <div class="absolute inset-0 image-container">
+                <img src="img/la_primera_flor.jpg" alt="Primera flor" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              </div>
+              <div class="relative z-10 h-full flex flex-col justify-center items-center text-center p-4">
+                <div class="space-y-3">
+                  <h3 class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Primera flor</h3>
+                  <p class="text-white text-base leading-relaxed" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.9);">"Le robe a una profe para darte"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile Grande - Primer Abrazo -->
+          <div class="bento-tile md:col-span-2 lg:col-span-3 rounded-3xl overflow-hidden shadow-xl">
+            <div class="w-full h-full relative group">
+              <div class="absolute inset-0 image-container">
+                <img src="img/primer_abrazo_en_foto.jpg" alt="Primer abrazo en foto" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              </div>
+              <div class="relative z-10 h-full flex flex-col justify-center items-center text-center p-6">
+                <div class="space-y-4">
+                  <h3 class="text-3xl font-bold text-white" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Nosotros</h3>
+                  <p class="text-white text-lg leading-relaxed" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.9);">"El primer abrazo en foto"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tile - Churros Primera Salida -->
+          <div class="bento-tile lg:col-span-2 rounded-3xl overflow-hidden shadow-xl">
+            <div class="w-full h-full relative group">
+              <div class="absolute inset-0 image-container">
+                <img src="img/churros.jpg" alt="Primera salida inoficial" class="w-full h-full object-cover object-center">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+              </div>
+              <div class="relative z-10 h-full flex flex-col justify-center items-center text-center p-4">
+                <div class="space-y-3">
+                  <h3 class="text-2xl font-bold text-white" style="text-shadow: 2px 2px 12px rgba(0,0,0,0.9);">Primera salida inoficial</h3>
+                  <p class="text-white text-base leading-relaxed" style="text-shadow: 1px 1px 8px rgba(0,0,0,0.9);">"Cuando eso ya queria casarme"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- NOSOTROS / LOVE LETTER -->
+    <section id="nosotros" class="py-14 sm:py-20 bg-gradient-to-b from-love-50 to-white">
+      <div class="max-w-3xl mx-auto px-4">
+        <div class="rounded-3xl border border-love-100 bg-white p-8 sm:p-10 shadow">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-love-900 text-center">Una carta para vos</h2>
+          <p class="mt-6 text-lg text-love-800 leading-relaxed">
+            Gracias por estos seis meses que se sienten como un abrazo que no termina. Gracias por tu paciencia, por tu dulzura, por mirar conmigo en la misma direccion junto a mi. Con vos aprendí que el amor también es calma, es contención y es hogar. Me encanta tu risa, tu forma de decir mi nombre y la paz que encuentro en tus ojos.
+          </p>
+          <p class="mt-4 text-lg text-love-800 leading-relaxed">
+            Prometo cuidarte, escucharte y elegirte incluso en los dias nublados. Prometo darte los besos y abrazos cuando haga falta, besos cuando sobren ganas y manos cuando falten fuerzas. Sos mi lugar favorito del mundo.
+          </p>
+          <p class="mt-6 text-right text-love-700 italic">Con todo el amor del mundo, <span class="font-semibold">TSHYAE</span> ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / FOOTER QUOTE -->
+    <section class="py-14 sm:py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="rounded-3xl bg-love-600 text-white p-8 sm:p-12 shadow-glow">
+          <div class="grid md:grid-cols-2 gap-6 items-center">
+            <div>
+              <h3 class="text-3xl sm:text-4xl font-extrabold leading-tight">Feliz mesiversario, amor</h3>
+              <p class="mt-3 text-white/90">Que el mundo sea enorme, pero nuestro abrazo más grande.</p>
+            </div>
+            <div class="flex md:justify-end gap-4">
+              <a href="#inicio" class="px-5 py-3 rounded-2xl bg-white text-love-700 font-semibold hover:shadow-md transition">Volver al inicio</a>
+              <a href="#bento" class="px-5 py-3 rounded-2xl bg-white/10 ring-1 ring-white/30 text-white font-semibold hover:bg-white/20 transition">Ver fotos</a>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-sm text-love-600 mt-6">Hecho con ♥ para vos – 14 de agosto</p>
+      </div>
+    </section>
+
+    <!-- Back to top button -->
+    <button id="toTop" aria-label="Volver arriba" class="fixed bottom-4 right-4 px-3 py-2 rounded-xl bg-white/90 border border-love-200 shadow hover:shadow-lg text-love-700 hidden">↑</button>
+
+    <!-- Modern JavaScript with Advanced Interactions -->
+    <script>
+      // Enhanced floating hearts system
+      class HeartSystem {
+        constructor() {
+          this.container = document.querySelector('.hearts-bg');
+          this.hearts = [];
+          this.init();
+        }
+
+        init() {
+          this.createHearts();
+          this.addInteractivity();
+        }
+
+        createHearts() {
+          const total = 40;
+          for (let i = 0; i < total; i++) {
+            const heart = document.createElement('span');
+            const size = Math.random() * 18 + 10; // 10–28px
+            
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.bottom = (Math.random() * -120) + 'vh';
+            heart.style.width = size + 'px';
+            heart.style.height = size + 'px';
+            heart.style.animationDuration = (Math.random() * 15 + 12) + 's';
+            heart.style.animationDelay = (Math.random() * 10) + 's';
+            heart.style.opacity = (Math.random() * 0.4 + 0.1).toFixed(2);
+            
+            this.container.appendChild(heart);
+            this.hearts.push(heart);
+          }
+        }
+
+        addInteractivity() {
+          // Create hearts on cursor movement
+          let lastHeartTime = 0;
+          document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastHeartTime > 2000) { // Throttle to every 2 seconds
+              this.createInteractiveHeart(e.clientX, e.clientY);
+              lastHeartTime = now;
+            }
+          });
+        }
+
+        createInteractiveHeart(x, y) {
+          const heart = document.createElement('span');
+          heart.style.position = 'fixed';
+          heart.style.left = x + 'px';
+          heart.style.top = y + 'px';
+          heart.style.width = '20px';
+          heart.style.height = '20px';
+          heart.style.opacity = '0.6';
+          heart.style.pointerEvents = 'none';
+          heart.style.zIndex = '100';
+          heart.style.animation = 'sparkle 2s ease-out forwards';
+          
+          document.body.appendChild(heart);
+          
+          setTimeout(() => {
+            if (heart.parentNode) {
+              heart.parentNode.removeChild(heart);
+            }
+          }, 2000);
+        }
+      }
+
+      // Smooth scroll and navigation enhancements
+      class NavigationManager {
+        constructor() {
+          this.header = document.querySelector('header');
+          this.toTopBtn = document.getElementById('toTop');
+          this.init();
+        }
+
+        init() {
+          this.handleScroll();
+          this.setupSmoothNavigation();
+          this.setupToTopButton();
+        }
+
+        handleScroll() {
+          let lastScrollY = 0;
+          
+          window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            
+            // Header visibility based on scroll direction
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+              this.header.style.transform = 'translateY(-100%)';
+            } else {
+              this.header.style.transform = 'translateY(0)';
+            }
+            
+            // Header background opacity
+            const opacity = Math.min(currentScrollY / 100, 0.95);
+            this.header.style.background = `rgba(255, 255, 255, ${opacity})`;
+            
+            // Back to top button
+            if (currentScrollY > 500) {
+              this.toTopBtn?.classList.remove('hidden');
+            } else {
+              this.toTopBtn?.classList.add('hidden');
+            }
+            
+            lastScrollY = currentScrollY;
+          });
+        }
+
+        setupSmoothNavigation() {
+          // Enhanced smooth scrolling for navigation links
+          document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              const targetId = link.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+              
+              if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 100; // Account for header
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        }
+
+        setupToTopButton() {
+          this.toTopBtn?.addEventListener('click', () => {
+            window.scrollTo({ 
+              top: 0, 
+              behavior: 'smooth' 
+            });
+          });
+        }
+      }
+
+      // Intersection Observer for animations
+      class AnimationObserver {
+        constructor() {
+          this.observer = new IntersectionObserver(
+            this.handleIntersection.bind(this),
+            {
+              threshold: 0.1,
+              rootMargin: '0px 0px -50px 0px'
+            }
+          );
+          this.init();
+        }
+
+        init() {
+          // Observe elements for slide-in animations
+          document.querySelectorAll('.bento-tile, .glass, figure').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            this.observer.observe(el);
+          });
+        }
+
+        handleIntersection(entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target;
+              element.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+              element.style.opacity = '1';
+              element.style.transform = 'translateY(0)';
+              
+              // Add staggered delay for multiple elements
+              const delay = Array.from(element.parentNode.children).indexOf(element) * 100;
+              element.style.transitionDelay = `${delay}ms`;
+              
+              this.observer.unobserve(element);
+            }
+          });
+        }
+      }
+
+      // Parallax effects
+      class ParallaxManager {
+        constructor() {
+          this.elements = document.querySelectorAll('.parallax');
+          this.init();
+        }
+
+        init() {
+          if (this.elements.length === 0) return;
+          
+          window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            
+            this.elements.forEach(element => {
+              element.style.transform = `translateY(${rate}px)`;
+            });
+          });
+        }
+      }
+
+      // Initialize everything when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        new HeartSystem();
+        new NavigationManager();
+        new AnimationObserver();
+        new ParallaxManager();
+        
+        // Add loading complete class
+        document.body.classList.add('loaded');
+        
+        console.log('💕 Página de amor cargada con éxito!');
+      });
+
+      // Performance optimization
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          // Could register a service worker here for better performance
+        });
+      }
+    </script>
+  </body>
+</html>
